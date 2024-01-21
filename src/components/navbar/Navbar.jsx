@@ -16,14 +16,37 @@ const Navbar = () => {
         </header>
       </Link>
       <div className={`flex items-center text-xl`}>
-        <Link href="/projects" className={`mr-4 ${location.includes("projects") ? "border-b-2 border-primary" : null}`}>
+        <Link
+          href="/projects"
+          className={`mr-4 ${
+            location.includes("projects") ? "border-b-2 border-primary" : null
+          }`}
+        >
           Projects
         </Link>
-        <Link href="/testimonials" className={`mr-4 ${location.includes("test") ? "border-b-2 border-primary" : null}`}>
+        <Link
+          href="/testimonials"
+          className={`mr-4 ${
+            location.includes("test") ? "border-b-2 border-primary" : null
+          }`}
+        >
           Testimonials
         </Link>
-        <Link href="/certifications" className={`mr-4 ${location.includes("cert") ? "border-b-2 border-primary" : null}`}>
+        <Link
+          href="/certifications"
+          className={`mr-4 ${
+            location.includes("cert") ? "border-b-2 border-primary" : null
+          }`}
+        >
           Certifications
+        </Link>
+        <Link
+          href="/contact"
+          className={`mr-4 ${
+            location.includes("contact") ? "border-b-2 border-primary" : null
+          }`}
+        >
+          Contact Us
         </Link>
       </div>
     </nav>

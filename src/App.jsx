@@ -6,6 +6,10 @@ import Hero from "./components/hero/Hero";
 import About from "./components/about/about";
 import Projects from "./components/projects/Projects";
 import "react-image-gallery/styles/css/image-gallery.css";
+import Testimonials from "./components/testimonials/Testimonials";
+import Certs from "./components/certifications/Certs";
+import { Toaster } from "@/components/ui/toaster";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,7 +21,11 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Testimonials />
+        <Certs />
+        <Contact />
       </div>
+      <Toaster />
     </div>
   );
 }

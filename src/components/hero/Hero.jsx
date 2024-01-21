@@ -1,5 +1,6 @@
 import HeroSVG from "../../assets/hero.svg";
 import Logo from "../../assets/tpm_logo.png";
+import { FaPhone } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -13,6 +14,14 @@ const Hero = () => {
         <h2 className="text-xl">
           A Computer Aided Drafting and Design Company
         </h2>
+        <div>
+          <p className="flex items-center text-xl">
+            <span className="mr-2">
+              <FaPhone />
+            </span>
+            <a href="tel:+16023973579">(602) 397-3579</a>
+          </p>
+        </div>
         {/* <p className="text-center">
           For over 25 years, our dedication to detail has been unwavering. We
           are committed to providing personalized guidance and attention to each

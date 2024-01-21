@@ -9,8 +9,11 @@ import {
 import ProjectComplete from "../../assets/project_complete.svg";
 import ProjectTeam from "../../assets/project_team.svg";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "wouter";
 
 const About = () => {
+  const [location] = useLocation();
+
   return (
     <div className="w-full">
       <Card className="flex pt-4 w-full mb-4">
@@ -53,9 +56,14 @@ const About = () => {
         </CardContent>
       </Card>
       <div className="bg-primary text-white flex items-center p-4">
-        <Button variant="outline" className="mr-4 text-3xl text-dark hover:text-primary">
-          Contact Us
-        </Button>
+        <Link href="/contact">
+          <Button
+            variant="outline"
+            className="mr-4 text-3xl text-dark hover:text-primary"
+          >
+            Contact Us
+          </Button>
+        </Link>
         <p className="text-xl">
           For over 25 years, our dedication to detail has been unwavering. We
           are committed to providing personalized guidance and attention to each
