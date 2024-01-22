@@ -3,7 +3,7 @@ import "./App.css";
 import { Button } from "@/components/ui/button";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
-import About from "./components/about/about";
+import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Testimonials from "./components/testimonials/Testimonials";
