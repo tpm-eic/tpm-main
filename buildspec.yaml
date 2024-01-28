@@ -13,7 +13,7 @@ phases:
   post_build:
     commands:
       - aws s3 sync dist/ s3://tpm-main-site/ --region us-west-2
-      # - aws cloudfront create-invalidation --distribution-id E24IXYQK3STXGH --paths "/*" --region us-west-2
+      - aws cloudfront create-invalidation --distribution-id E1X2XIV1JTO3L4 --paths "/*" --region us-west-2
 
 artifacts:
   files: '**/*'

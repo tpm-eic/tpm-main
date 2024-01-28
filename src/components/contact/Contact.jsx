@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { FiSend } from "react-icons/fi";
 import { FaPhone } from "react-icons/fa6";
+import axios from "../../utils/axios";
 
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
@@ -37,9 +38,31 @@ const Contact = () => {
       message: "",
     },
   });
+  const { toast } = useToast();
   async function onSubmit(values) {
-    console.log(values);
     if (hp) return;
+    try {
+      const { data } = await axios("/api/v1/email", {
+        method: "POST",
+        data: values,
+      });
+      toast({
+        title: "Success",
+        description: "Inquiry sent successfully!",
+        status: "success",
+        duration: 4000,
+        isClosable: true,
+      });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: error.toString(),
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   }
   const contact = useRef(null);
   const [location] = useLocation();
@@ -52,7 +75,10 @@ const Contact = () => {
     // Add similar conditions for other sections
   }, [location]);
   return (
-    <div ref={contact}>
+    <div
+      ref={contact}
+      className="flex flex-col justify-start max-w-[500px] p-2"
+    >
       <div className="flex items-center">
         <h3 className="self-start text-3xl my-2 underline mr-2">Contact Us</h3>
         <div>
