@@ -16,18 +16,26 @@ const images = [
   {
     original: Image1,
     thumbnail: Image1,
+    originalAlt: "Total Project Management Design Example",
+    thumbnailAlt: "Total Project Management Design Example"
   },
   {
     original: Image2,
     thumbnail: Image2,
+    originalAlt: "Total Project Management Design Example",
+    thumbnailAlt: "Total Project Management Design Example"
   },
   {
     original: Image3,
     thumbnail: Image3,
+    originalAlt: "Total Project Management Design Example",
+    thumbnailAlt: "Total Project Management Design Example"
   },
   {
     original: Image4,
     thumbnail: Image4,
+    originalAlt: "Total Project Management Design Example",
+    thumbnailAlt: "Total Project Management Design Example"
   },
 ];
 
